@@ -33,9 +33,9 @@ mailTransporter.sendMail(
 
 // Solo escuchar el puerto en desarrollo local
 if (process.env.NODE_ENV !== 'production') {
-  const port = ENVIRONMENT.PORT || 3000;
+  const port = ENVIRONMENT.PORT || 8080;
   app.listen(port, () => {
-    console.log(`Servidor corriendo en puerto ${port} 🚀`);
+    console.log(`Servidor corriendo en puerto ${port}`);
   });
 }
 
