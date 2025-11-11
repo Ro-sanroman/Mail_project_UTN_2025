@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken'
 
 function authMiddleware(request, response, next) {
     try {
-       const auth_header = request.headers.authorization
+        const auth_header = request.headers.authorization
         if (!auth_header) {
             throw new ServerError(401, 'No hay header de autorizacion')
         }
@@ -58,5 +58,6 @@ function authMiddleware(request, response, next) {
         }
     }
 }
+
 
 export default authMiddleware
