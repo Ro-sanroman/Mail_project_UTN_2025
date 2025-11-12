@@ -74,7 +74,7 @@ class MemberWorkspaceRepository {
         try {
             const members = await MemberWorkspace.find({
                 id_user: user_id
-            })
+            }).populate('id_workspace')
             return members
         }
         catch (error) {
